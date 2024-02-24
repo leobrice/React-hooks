@@ -13,6 +13,9 @@ function App() {
         <button className='p-4 bg-green-500 rounded-2xl' onClick={()=>{setCount(count+1)}}> 
           Count
         </button>
+        <button className='p-4 mx-4 bg-red-500 rounded-2xl' onClick={()=>{setCount(0)}}>
+          Clear          
+        </button>
       </div>
       
     </div>
