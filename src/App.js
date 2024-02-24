@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState,useEffect } from 'react';
 
 function App() {
+  
+  const [count,setCount]=useState(0);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex items-center justify-center h-screen bg-white">
+      <div className=''>
+        <p>You have counted {count} times</p>
+        <button className='p-4 bg-green-500 rounded-2xl' onClick={()=>{setCount(count+1)}}> 
+          Count
+        </button>
+      </div>
+      
     </div>
   );
 }
